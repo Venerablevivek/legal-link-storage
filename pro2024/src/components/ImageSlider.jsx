@@ -29,7 +29,7 @@ const ImageSlider = () => {
 
   const Image = styled("img")({
     width: "100%",
-    height: 400,
+    height: 650,
   });
 
   return (
