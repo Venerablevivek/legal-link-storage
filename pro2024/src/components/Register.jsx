@@ -4,6 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUserInfo } from "../redux/Users";
+import logos from "../images/logo1.png";
 
 function Register() {
   const dispatch = useDispatch();
@@ -47,8 +48,10 @@ function Register() {
   return (
     <div className="min-h-screen flex flex-col items-center bg-[#1E1E1E]">
       <div className="w-3/4 m-auto rounded-lg bg-[#393E46] drop-shadow-md">
-        <h2 className="flex justify-center p-6 text-[#00ADB5] font-bold text-2xl">
-          CryptDrive | Register
+      <h2 className="flex flex-col md:flex-row justify-center p-6 text-[#00ADB5] font-bold text-2xl">
+          <div className="md:mr-4 mb-2 md:mb-0 md:mb-0">
+            <img src={logos} alt="logo image" className="w-40 h-15" />
+          </div>
         </h2>
 
         <div className="grid grid-cols-1 gap-4 md:grid md:grid-cols-2 md:gap-16">

@@ -37,8 +37,10 @@ function Login() {
   return (
     <div className="min-h-screen flex flex-col items-center bg-[#1E1E1E]">
       <div className="w-3/4 m-auto rounded-lg bg-[#393E46] drop-shadow-md">
-        <h2 className="flex justify-center p-6 text-[#00ADB5] font-bold text-2xl">
-          <img src={logos} alt="logo image" className="w-40 h-15" /> | Login
+      <h2 className="flex flex-col md:flex-row justify-center p-6 text-[#00ADB5] font-bold text-2xl">
+          <div className="md:mr-4 mb-2 md:mb-0 md:mb-0">
+            <img src={logos} alt="logo image" className="w-40 h-15" />
+          </div>
         </h2>
         <form onSubmit={handleSubmit} className="p-4">
           <div className="grid grid-cols-1 gap-4 md:grid md:grid-cols-2 md:gap-16">
