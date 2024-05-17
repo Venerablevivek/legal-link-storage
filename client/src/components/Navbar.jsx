@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logos from "../images/logo1.png";
+import logos from "../images/logo.png";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -27,7 +27,10 @@ function Navbar() {
       <nav className="flex items-center justify-between bg-[#393E46] p-2">
         <div className="flex items-center">
           <Link to="/">
-            <img src={logos} alt="logo image" className="w-60 h-25" />
+          <div className='flex gap-3 items-center ' >
+                      <img src={logos} width="70px" />
+                      <p className='text-[#DC1F27] text-[25px] font-semibold ' >Legal-Link Storage</p>
+                  </div>
           </Link>
         </div>
 
@@ -47,14 +50,14 @@ function Navbar() {
         {/* Desktop View Buttons */}
         <div className="hidden lg:flex items-center">
           <button
-            className="bg-[#00ADB5] text-[#EEEEEE] p-2 rounded-md font-bold mr-8"
+            className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE] p-2 rounded-md font-bold mr-8"
             onClick={handleSignIn}
           >
             Sign In
           </button>
 
           <button
-            className="bg-[#00ADB5] text-[#EEEEEE] p-2 rounded-md font-bold mr-4"
+            className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE] p-2 rounded-md font-bold mr-4"
             onClick={handleSignUp}
           >
             Sign Up
@@ -67,14 +70,14 @@ function Navbar() {
           {/* Mobile Menu Buttons */}
           <div className="backdrop-blur-md p-4 flex flex-col items-center">
             <button
-              className="bg-[#00ADB5] text-[#EEEEEE]  px-4 py-2 rounded mb-2 font-bold  w-[150px]"
+              className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE]  px-4 py-2 rounded mb-2 font-bold  w-[150px]"
               onClick={handleSignIn}
             >
               Sign In
             </button>
 
             <button
-              className="bg-[#00ADB5] text-[#EEEEEE]  px-4 py-2 rounded mb-2 font-bold  w-[150px]"
+              className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE]  px-4 py-2 rounded mb-2 font-bold  w-[150px]"
               onClick={handleSignUp}
             >
               Sign Up

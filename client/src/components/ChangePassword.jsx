@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import logos from "../images/logo1.png";
+import logos from "../images/logo.png";
 
 const ChangePassword = () => {
   const user = useSelector((state) => state.usersReducer.user);
@@ -38,9 +38,12 @@ const ChangePassword = () => {
   return (
     <div className="min-h-screen flex flex-col items-center bg-[#1E1E1E]">
       <div className="w-2/4 m-auto rounded-lg bg-[#393E46] drop-shadow-md">
-        <h2 className="flex justify-center p-6 text-[#00ADB5] font-bold text-2xl">
-          <img src={logos} alt="logo image" className="w-40 h-15" /> | Change
-          Password
+        <h2 className="flex justify-center items-center gap-3 p-6 text-red-500 font-bold text-2xl">
+        <div className='flex gap-3 items-center ' >
+                      <img src={logos} width="70px" />
+                      <p className='text-[#DC1F27] text-[25px] font-semibold ' >Legal-Link Storage</p>
+                  </div> 
+                  <p>| Change Password</p>
         </h2>
         <div className=" flex-1 m-4">
           <input
@@ -65,7 +68,7 @@ const ChangePassword = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           <button
-            className="w-full p-2 bg-[#00ADB5] text-[#FFFFFF] font-bold text-xl rounded-b-lg"
+            className="w-full p-2 bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#FFFFFF] font-bold text-xl rounded-b-lg"
             onClick={handleChangePassword}
           >
             Change Password

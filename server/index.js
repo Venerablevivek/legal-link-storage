@@ -55,7 +55,7 @@ app.post("/register", async (req, res) => {
 
     res.json({ success: true });
   } catch (error) {
-    console.error("Error during registration:", error);
+    console.error("Error during registration:", error.message);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });

@@ -9,11 +9,11 @@ function AboutUs() {
   return (
     <div className="container mx-auto text-center ">
       <h1 className="text-5xl font-bold mb-16 text-gray-300 mt-4">
-        Crypt Drive
+        Legal-Link Storage
       </h1>
 
       <p className="text-lg leading-relaxed mb-8 text-gray-300 text-justify mx-16">
-        Crypt Drive is a cutting-edge document storage solution leveraging
+        Legal-Link Storage is a cutting-edge document storage solution leveraging
         blockchain technology for enhanced security and accessibility. This
         innovative platform is designed to redefine decentralized data
         management, placing privacy at the forefront. Users experience a
@@ -22,7 +22,7 @@ function AboutUs() {
       </p>
 
       <p className="text-lg leading-relaxed mb-8 text-gray-300 text-justify mx-16">
-        At the heart of Crypt Drive is a robust backend built on Node.js and
+        At the heart of Legal-Link Storage is a robust backend built on Node.js and
         MySQL, ensuring reliable and scalable performance. The server
         facilitates user registration and login processes with encrypted
         password handling, incorporating bcrypt for advanced security. The
@@ -32,17 +32,17 @@ function AboutUs() {
       </p>
 
       <p className="text-lg leading-relaxed mb-8 text-gray-300 text-justify mx-16">
-        Crypt Drive document preview feature enhances the user experience,
+        Legal-Link Storage document preview feature enhances the user experience,
         allowing individuals to visualize their uploaded documents directly
         within the platform. This functionality streamlines the process of
         verifying and accessing documents, making it an ideal solution for users
         who prioritize efficiency in managing their digital assets.
       </p>
-      <h1 className="text-5xl font-bold mb-16 text-teal-500 mt-4">
+      <h1 className="text-5xl font-bold mb-16 text-red-500 mt-4">
         Why Choose Us?
       </h1>
 
-      <h1 className="text-3xl font-bold mb-16 text-blue-300 mt-4">
+      <h1 className="text-3xl font-bold mb-16 text-red-300 mt-4">
         Our Services
       </h1>
 
@@ -100,11 +100,11 @@ function AboutUs() {
         </h3>
 
         <div className="flex justify-center space-x-4">
-          <button className="bg-teal-500 text-white py-2 px-4 rounded-md font-bold border-light-blue-700 hover:bg-light-blue-700 transition duration-300 ease-in-out">
+          <button className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md font-bold border-light-blue-700 hover:bg-light-blue-700 transition duration-300 ease-in-out">
             <Link to="/contact"> Contact Us</Link>
           </button>
 
-          <button className="bg-teal-500 text-white py-2 px-4 rounded-md font-bold border-light-blue-700 hover:bg-light-blue-700 transition duration-300 ease-in-out">
+          <button className="bg-red-500  hover:bg-red-600 text-white py-2 px-4 rounded-md font-bold border-light-blue-700 hover:bg-light-blue-700 transition duration-300 ease-in-out">
             <Link to="/register"> Sign Up</Link>
           </button>
         </div>

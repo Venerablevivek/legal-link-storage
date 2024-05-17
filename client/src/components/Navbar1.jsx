@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { userSignOut } from "../redux/Users";
-import logos from "../images/logo1.png";
+import logos from "../images/logo.png";
 
 
 function Navbar1() {
@@ -32,7 +32,10 @@ function Navbar1() {
       <nav className="flex items-center justify-between bg-[#393E46] p-2">
         <div className="flex items-center">
           <Link to="/">
-            <img src={logos} alt="logo image" className="w-60 h-25" />
+          <div className='flex gap-3 items-center ' >
+                      <img src={logos} width="70px" />
+                      <p className='text-[#DC1F27] text-[25px] font-semibold ' >Legal-Link Storage</p>
+                  </div>
           </Link>
         </div>
 
@@ -56,17 +59,17 @@ function Navbar1() {
           <div className="flex items-center space-x-4">
             
             <Link to="/UploadFile">
-              <button className="bg-[#00ADB5] text-[#EEEEEE] font-bold px-4 py-2 rounded">
+              <button className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE] font-bold px-4 py-2 rounded">
                 Upload
               </button>
             </Link>
             <Link to="/get_docs">
-              <button className="bg-[#00ADB5] text-[#EEEEEE] font-bold px-4 py-2 rounded">
+              <button className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE] font-bold px-4 py-2 rounded">
                 Get Docs
               </button>
             </Link>
             <Link to="/share_docs">
-              <button className="bg-[#00ADB5] text-[#EEEEEE] font-bold px-4 py-2 rounded">
+              <button className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE] font-bold px-4 py-2 rounded">
                 Share Docs
               </button>
             </Link>
@@ -79,9 +82,9 @@ function Navbar1() {
           )}
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
-            <Link to="#">
+            <Link to="/changepassword">
               <button
-                className="bg-[#00ADB5] text-[#EEEEEE] font-bold px-4 py-2 rounded"
+                className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE] font-bold px-4 py-2 rounded"
                 onClick={handleChnagePassword}
               >
                 Change Password
@@ -89,7 +92,7 @@ function Navbar1() {
             </Link>
             <Link to="/">
               <button
-                className="bg-[#00ADB5] text-[#EEEEEE] font-bold px-4 py-2 rounded"
+                className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE] font-bold px-4 py-2 rounded"
                 onClick={handleLogout}
               >
                 Logout
@@ -110,26 +113,26 @@ function Navbar1() {
             )}
 
             <Link to="/UploadFile">
-              <button className="bg-[#00ADB5] text-[#EEEEEE] font-bold px-4 py-2 rounded mb-2 w-[150px]">
+              <button className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE] font-bold px-4 py-2 rounded mb-2 w-[150px]">
                 Upload
               </button>
             </Link>
 
             <Link to="/get_docs">
-              <button className="bg-[#00ADB5] text-[#EEEEEE] font-bold px-4 py-2 rounded mb-2 w-[150px]">
+              <button className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE] font-bold px-4 py-2 rounded mb-2 w-[150px]">
                 Get Docs
               </button>
             </Link>
 
             <Link to="/share_docs">
-              <button className="bg-[#00ADB5] text-[#EEEEEE] font-bold px-4 py-2 rounded mb-2 w-[150px]">
+              <button className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE] font-bold px-4 py-2 rounded mb-2 w-[150px]">
                 Share Docs
               </button>
             </Link>
 
             <Link to="/">
               <button
-                className="bg-[#00ADB5] text-[#EEEEEE] font-bold px-4 py-2 rounded w-[150px]"
+                className="bg-red-500 hover:bg-red-600 transition-all duration-200 text-[#EEEEEE] font-bold px-4 py-2 rounded w-[150px]"
                 onClick={handleLogout}
               >
                 Logout

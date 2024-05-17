@@ -145,11 +145,15 @@ const ShareDoc = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredUsers, setFilteredUsers] = useState([]);
   useEffect(() => {
-    const filtered = users.filter((user) =>
-      user.fullName.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setFilteredUsers(filtered.slice(0, 4));
-    // console.log(filtered);
+      const filteredData = users?.filter((item) =>
+    Object.values(item)
+      .join("")
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase())
+  );
+
+  console.log("filtered", filteredData);
+      setFilteredUsers(filteredData?.slice(0, 4));
   }, [searchQuery, users]);
 
   const handleSearchInputChange = (event) => {
@@ -164,7 +168,7 @@ const ShareDoc = () => {
   return (
     <div className="md:grid md:grid-cols-9 gap-4 h-fit pt-4 pb-4 bg-[#1A2027] flex flex-col">
       <div className="row-span-3 col-span-3 h-fit p-2 bg-[#222831] text-[#EEEEEE] rounded-md">
-        <div className=" bg-[#00ADB5] rounded-md font-bold p-2 mb-2">
+        <div className=" bg-red-500 hover:bg-red-600 transition-all duration-200 rounded-md font-bold p-2 mb-2">
           <h1 className=" font-bold text-white">Users</h1>
         </div>
         <input
@@ -200,7 +204,7 @@ const ShareDoc = () => {
         </div>
       </div>
       <div className="row-span-3 col-span-3 h-fit p-2 bg-[#222831] text-[#EEEEEE] rounded-md">
-        <div className="text-white bg-[#00ADB5] rounded-md font-bold p-2 mb-2">
+        <div className="text-white bg-red-500 hover:bg-red-600 transition-all duration-200 rounded-md font-bold p-2 mb-2">
           <h1 className=" font-bold">User Documents</h1>
         </div>
         <ul className="">
@@ -216,7 +220,7 @@ const ShareDoc = () => {
         </ul>
       </div>
       <div className="row-span-3 col-span-3 h-fit p-2 bg-[#222831] text-[#EEEEEE] rounded-md">
-        <div className="text-white bg-[#00ADB5] rounded-md font-bold p-2 mb-2">
+        <div className="text-white bg-red-500 hover:bg-red-600 transition-all duration-200 rounded-md font-bold p-2 mb-2">
           <h1 className=" font-bold">Document requests</h1>
         </div>
 
@@ -240,7 +244,7 @@ const ShareDoc = () => {
             )}
           </div>
           <div className="p-2 rounded-md bg-[#393E46]">
-            <div className=" text-white bg-[#00ADB5] rounded-md font-bold p-2 mb-2">
+            <div className=" text-white bg-red-500 hover:bg-red-600 transition-all duration-200 rounded-md font-bold p-2 mb-2">
               <h1 className=" font-bold">Requests History</h1>
             </div>
             <ul>

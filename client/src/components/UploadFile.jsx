@@ -72,7 +72,7 @@ function UploadFile() {
       <div className="col-span-5 h-500 p-2 bg-[#1A2027] text-[#222831] shadow-md flex flex-col justify-center items-center ">
         <h1 className="text-white text-lg font-bold mb-4">Upload Document</h1>
         <button
-          className="bg-teal-500 text-white border border-white px-4 py-2 rounded w-80 mb-2"
+          className="bg-red-500 hover:bg-red-600 duration-200 transition-all outline-none border-none text-white px-4 py-2 rounded w-80 mb-2"
           onClick={handleUpload}
         >
           Upload File
@@ -85,7 +85,7 @@ function UploadFile() {
         />
         <h3 className="text-white px-4 py-2">.pdf, .jpg, .png files</h3>
         <button
-          className="bg-teal-500 text-white border border-white px-4 py-2 rounded w-80 mt-4"
+          className="bg-red-500 hover:bg-red-600 duration-200 transition-all outline-none border-none text-white px-4 py-2 rounded w-80 mt-4"
           onClick={handlePreview}
         >
           Preview File
@@ -102,7 +102,7 @@ function UploadFile() {
         <h1>Document Preview</h1>
         {preview && selectedDocument && (
           <iframe
-            src={selectedDocument.previewUrl}
+            src={selectedDocument}
             title="Document Preview"
             width="100%"
             height="95%"

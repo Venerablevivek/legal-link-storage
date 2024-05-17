@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { setUserInfo } from "../redux/Users";
-import logos from "../images/logo1.png";
+import logos from "../images/logo.png";
 
 function Login() {
   const navigate = useNavigate();
@@ -38,8 +38,11 @@ function Login() {
     <div className="min-h-screen flex flex-col items-center bg-[#1E1E1E]">
       <div className="w-3/4 m-auto rounded-lg bg-[#393E46] drop-shadow-md">
       <h2 className="flex flex-col md:flex-row justify-center p-6 text-[#00ADB5] font-bold text-2xl">
-          <div className="md:mr-4 mb-2 md:mb-0 md:mb-0">
-            <img src={logos} alt="logo image" className="w-40 h-15" />
+          <div className="md:mr-4 mb-2 md:mb-0 ">
+          <div className='flex gap-3 items-center ' >
+                            <img src={logos} width="50px" />
+                            <p className='text-[#DC1F27] text-[25px] font-semibold ' >Legal-Link Storage</p>
+          </div>
           </div>
         </h2>
         <form onSubmit={handleSubmit} className="p-4">
@@ -68,7 +71,7 @@ function Login() {
 
           <button
             type="submit"
-            className="w-full p-2 bg-[#00ADB5] text-[#FFFFFF] font-bold text-xl rounded-b-lg"
+            className="w-full p-2 bg-red-500 hover:bg-red-600 duration-200 transition-all text-[#FFFFFF] font-bold text-xl rounded-b-lg"
           >
             Login
           </button>

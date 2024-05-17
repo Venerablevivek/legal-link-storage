@@ -102,7 +102,7 @@ const ContactForm = () => {
     <>
       <div className="flex h-screen mx-4">
         <div className="w-1/2 bg-gray-800 flex flex-col items-center justify-center p-8">
-          <h2 className="text-6xl font-bold text-blue-400 mb-8">Contact Us</h2>
+          <h2 className="text-6xl font-bold text-red-500 mb-8">Contact Us</h2>
           <p className="text-gray-300 text-center">
             Contact us for any inquiries, assistance, or collaboration
             opportunities. We value your feedback and are here to address your
@@ -119,7 +119,7 @@ const ContactForm = () => {
             onSubmit={handleSubmit}
             className="w-full max-w-md p-4 bg-gray-800 shadow-md border rounded"
           >
-            <h2 className="text-2xl font-bold mb-8 text-teal-500 text-center">
+            <h2 className="text-2xl font-bold mb-8 text-red-500 text-center">
               Contact Us
             </h2>
             <div className="mb-4">
@@ -219,7 +219,7 @@ const ContactForm = () => {
             <div className="mb-4">
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white py-2 rounded"
+                className="w-full bg-red-500 transition-all duration-200 hover:bg-red-600  text-white py-2 rounded"
               >
                 Submit
               </button>
