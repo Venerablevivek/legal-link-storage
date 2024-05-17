@@ -20,7 +20,7 @@ const ChangePassword = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/change-password",
+        "https://legal-link-storage.onrender.com/change-password",
         {
           Aadhar: user.Aadhar,
           oldPassword,

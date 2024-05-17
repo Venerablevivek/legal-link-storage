@@ -13,7 +13,7 @@ const ShareDoc = () => {
   // console.log(selectedDocument?.name)
 
   const fetchRequestHistory = (aadhar) => {
-    fetch(`http://localhost:3001/getRequestHistory/${aadhar}`)
+    fetch(`https://legal-link-storage.onrender.com/getRequestHistory/${aadhar}`)
       .then((response) => response.json())
       .then((data) => {
         setRequestHistory(data);
@@ -31,7 +31,7 @@ const ShareDoc = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/users")
+    fetch("https://legal-link-storage.onrender.com/users")
       .then((response) => response.json())
       .then((res) => {
         setUsers(res);
@@ -44,7 +44,7 @@ const ShareDoc = () => {
 
   useEffect(() => {
     if (selectedUser) {
-      fetch(`http://localhost:3001/getDocuments/${selectedUser.Aadhar}`)
+      fetch(`https://legal-link-storage.onrender.com/getDocuments/${selectedUser.Aadhar}`)
         .then((response) => response.json())
         .then((data) => {
           setUserDocuments(data);
@@ -74,7 +74,7 @@ const ShareDoc = () => {
         documentName: selectedDocument.name,
       };
 
-      fetch("http://localhost:3001/requestAccess", {
+      fetch("https://legal-link-storage.onrender.com/requestAccess", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -98,7 +98,7 @@ const ShareDoc = () => {
     requesterAadhar,
     documentId
   ) => {
-    fetch(`http://localhost:3001/updateRequestStatus/${requestId}`, {
+    fetch(`https://legal-link-storage.onrender.com/updateRequestStatus/${requestId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -115,7 +115,7 @@ const ShareDoc = () => {
             documentId: documentId,
           };
 
-          fetch("http://localhost:3001/storeApprovedRequest", {
+          fetch("https://legal-link-storage.onrender.com/storeApprovedRequest", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

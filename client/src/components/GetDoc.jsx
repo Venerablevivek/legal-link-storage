@@ -14,14 +14,14 @@ const GetDoc = () => {
   const user = useSelector((state) => state.usersReducer.user);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/getDocuments/${user.Aadhar}`)
+    fetch(`https://legal-link-storage.onrender.com/getDocuments/${user.Aadhar}`)
       .then((response) => response.json())
       .then((data) => {
         setDocumentList(data);
       })
       .catch((error) => setError(error.message));
 
-    fetch("http://localhost:3001/getApprovedDocuments")
+    fetch("https://legal-link-storage.onrender.com/getApprovedDocuments")
       .then((response) => response.json())
       .then((data) => {
         const userApprovedDocuments = data.filter(
@@ -44,7 +44,7 @@ const GetDoc = () => {
 
   const handlePasswordSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:3001/verifyPassword", {
+      const response = await fetch("https://legal-link-storage.onrender.com/verifyPassword", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

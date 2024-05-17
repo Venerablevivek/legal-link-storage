@@ -16,7 +16,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3001/login", {
+      const response = await axios.post("https://legal-link-storage.onrender.com/login", {
         Aadhar: aadharNumber,
         Password: password,
       });
